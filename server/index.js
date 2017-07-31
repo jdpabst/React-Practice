@@ -31,4 +31,4 @@ var userController = require("./userController.js");
 
 
 
-app.listen(config.port, console.log("you are now connected on " + config.port));
+app.listen(8086, console.log("you are now connected on 8086"));
