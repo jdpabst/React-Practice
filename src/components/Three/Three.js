@@ -6,17 +6,17 @@ import './Three.css';
 class Three extends Component {
     constructor(props){
         super(props);
-        
+        this.state = {
+            poke: {}
+        }
     }
 
-    componentWillMount(){
-        axios.get('http://pokeapi.co/api/v2/pokemon')
-            .then(function(res){
-                console.log(res);
-            })
-            .catch(function(err){
-                console.log(err);
-            })
+    componentDidMount() {
+        axios.get(`http://pokeapi.co/api/v2/pokemon`)
+        .then(response => this.setState(
+            { 
+                poke: response.data
+            }))
     }
   render() {
     return (
