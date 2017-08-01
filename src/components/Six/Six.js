@@ -14,12 +14,20 @@ class Six extends Component {
         this.countDown = this.countDown.bind(this);
         this.countUp = this.countUp.bind(this);
     }
-
+    
     countUp(num){
+        num = this.state.counter;
         num += 1;
+        this.setState({
+            counter: num
+        })
     }
     countDown(num){
+        num = this.state.counter;
         num -= 1;
+        this.setState({
+            counter: num
+        })
     }
 
 
@@ -27,7 +35,7 @@ class Six extends Component {
     return (
       <div className="six">
         <ChildOne start = { this.state.counter }/>
-        <ChildTwo add={ this.countUp(this.state.counter) } sub={ this.countDown(this.state.counter) }/>
+        <ChildTwo add={ this.countUp } sub={ this.countDown }/>
       </div>
     );
   }
