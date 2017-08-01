@@ -5,14 +5,29 @@ import ChildTwo from './ChildTwo/ChildTwo';
 
 import './Six.css';
 
-
 class Six extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            counter: 0
+        }
+        this.countDown = this.countDown.bind(this);
+        this.countUp = this.countUp.bind(this);
+    }
+
+    countUp(num){
+        num += 1;
+    }
+    countDown(num){
+        num -= 1;
+    }
+
 
   render() {
     return (
       <div className="six">
-        <ChildOne/>
-        <ChildTwo/>
+        <ChildOne start = { this.state.counter }/>
+        <ChildTwo add={ this.countUp } sub={ this.countDown }/>
       </div>
     );
   }
