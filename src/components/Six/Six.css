@@ -1,4 +1,7 @@
 .six{
     width: 100%;
     border: 2px solid steelblue;
+    margin: 20px 0;
+    height: 100px;
+    position: relative;
 }

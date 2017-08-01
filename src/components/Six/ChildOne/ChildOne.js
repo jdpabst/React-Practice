@@ -10,7 +10,7 @@ class ChildOne extends Component {
   render() {
     return (
       <div className="child_one">
-
+        <div>{ this.props.start }</div>
       </div>
     );
   }

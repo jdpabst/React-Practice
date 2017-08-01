@@ -10,7 +10,8 @@ class ChildTwo extends Component {
   render() {
     return (
       <div className="child_two">
-
+        <button type="button" onClick={ this.props.add }>+1</button>
+        <button type="button" onClick={ this.props.sub }>-1</button>
       </div>
     );
   }

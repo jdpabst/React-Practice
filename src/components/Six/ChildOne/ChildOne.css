@@ -1,0 +1,13 @@
+.child_one{
+    background: gainsboro;
+    color: white;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    border: 2px solid orchid;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}

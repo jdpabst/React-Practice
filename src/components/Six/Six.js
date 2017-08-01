@@ -27,7 +27,7 @@ class Six extends Component {
     return (
       <div className="six">
         <ChildOne start = { this.state.counter }/>
-        <ChildTwo add={ this.countUp } sub={ this.countDown }/>
+        <ChildTwo add={ this.countUp(this.state.counter) } sub={ this.countDown(this.state.counter) }/>
       </div>
     );
   }
